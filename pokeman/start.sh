@@ -1,1 +1,0 @@
-docker run -it --name spark-cluster -p 4040:4040 -p 8080:8080 -v /Users/kbandaru/Documents/airflow-materials/pokeman/mnt/:/mnt/ omg /bin/bash
