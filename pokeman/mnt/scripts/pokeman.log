@@ -1,0 +1,91 @@
+23/03/03 04:21:35 INFO SparkContext: Running Spark version 3.3.2
+23/03/03 04:21:35 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+23/03/03 04:21:35 INFO ResourceUtils: ==============================================================
+23/03/03 04:21:35 INFO ResourceUtils: No custom resources configured for spark.driver.
+23/03/03 04:21:35 INFO ResourceUtils: ==============================================================
+23/03/03 04:21:35 INFO SparkContext: Submitted application: pokeman
+23/03/03 04:21:35 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+23/03/03 04:21:35 INFO ResourceProfile: Limiting resource is cpu
+23/03/03 04:21:35 INFO ResourceProfileManager: Added ResourceProfile id: 0
+23/03/03 04:21:35 INFO SecurityManager: Changing view acls to: root
+23/03/03 04:21:35 INFO SecurityManager: Changing modify acls to: root
+23/03/03 04:21:35 INFO SecurityManager: Changing view acls groups to: 
+23/03/03 04:21:35 INFO SecurityManager: Changing modify acls groups to: 
+23/03/03 04:21:35 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+23/03/03 04:21:35 INFO Utils: Successfully started service 'sparkDriver' on port 44779.
+23/03/03 04:21:35 INFO SparkEnv: Registering MapOutputTracker
+23/03/03 04:21:36 INFO SparkEnv: Registering BlockManagerMaster
+23/03/03 04:21:36 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+23/03/03 04:21:36 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+23/03/03 04:21:36 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+23/03/03 04:21:36 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-4a5479f9-9d67-4312-948c-ebbec457c900
+23/03/03 04:21:36 INFO MemoryStore: MemoryStore started with capacity 366.3 MiB
+23/03/03 04:21:36 INFO SparkEnv: Registering OutputCommitCoordinator
+23/03/03 04:21:36 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+23/03/03 04:21:36 INFO Executor: Starting executor ID driver on host ebc2c99cf2d5
+23/03/03 04:21:36 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+23/03/03 04:21:36 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 46115.
+23/03/03 04:21:36 INFO NettyBlockTransferService: Server created on ebc2c99cf2d5:46115
+23/03/03 04:21:36 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+23/03/03 04:21:36 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, ebc2c99cf2d5, 46115, None)
+23/03/03 04:21:36 INFO BlockManagerMasterEndpoint: Registering block manager ebc2c99cf2d5:46115 with 366.3 MiB RAM, BlockManagerId(driver, ebc2c99cf2d5, 46115, None)
+23/03/03 04:21:36 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, ebc2c99cf2d5, 46115, None)
+23/03/03 04:21:36 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, ebc2c99cf2d5, 46115, None)
+23/03/03 04:21:37 WARN SparkSession: Using an existing Spark session; only runtime SQL configurations will take effect.
+root
+ |-- #: integer (nullable = true)
+ |-- Name: string (nullable = true)
+ |-- Type 1: string (nullable = true)
+ |-- Type 2: string (nullable = true)
+ |-- Total: integer (nullable = true)
+ |-- HP: integer (nullable = true)
+ |-- Attack: integer (nullable = true)
+ |-- Defense: integer (nullable = true)
+ |-- Sp. Atk: integer (nullable = true)
+ |-- Sp. Def: integer (nullable = true)
+ |-- Speed: integer (nullable = true)
+ |-- Generation: integer (nullable = true)
+ |-- Legendary: boolean (nullable = true)
+
++---+--------------------+------+------+-----+---+------+-------+-------+-------+-----+----------+---------+
+|  #|                Name|Type 1|Type 2|Total| HP|Attack|Defense|Sp. Atk|Sp. Def|Speed|Generation|Legendary|
++---+--------------------+------+------+-----+---+------+-------+-------+-------+-----+----------+---------+
+|  1|           Bulbasaur| Grass|Poison|  318| 45|    49|     49|     65|     65|   45|         1|    false|
+|  2|             Ivysaur| Grass|Poison|  405| 60|    62|     63|     80|     80|   60|         1|    false|
+|  3|            Venusaur| Grass|Poison|  525| 80|    82|     83|    100|    100|   80|         1|    false|
+|  3|VenusaurMega Venu...| Grass|Poison|  625| 80|   100|    123|    122|    120|   80|         1|    false|
+|  4|          Charmander|  Fire|  null|  309| 39|    52|     43|     60|     50|   65|         1|    false|
+|  5|          Charmeleon|  Fire|  null|  405| 58|    64|     58|     80|     65|   80|         1|    false|
+|  6|           Charizard|  Fire|Flying|  534| 78|    84|     78|    109|     85|  100|         1|    false|
+|  6|CharizardMega Cha...|  Fire|Dragon|  634| 78|   130|    111|    130|     85|  100|         1|    false|
+|  6|CharizardMega Cha...|  Fire|Flying|  634| 78|   104|     78|    159|    115|  100|         1|    false|
+|  7|            Squirtle| Water|  null|  314| 44|    48|     65|     50|     64|   43|         1|    false|
+|  8|           Wartortle| Water|  null|  405| 59|    63|     80|     65|     80|   58|         1|    false|
+|  9|           Blastoise| Water|  null|  530| 79|    83|    100|     85|    105|   78|         1|    false|
+|  9|BlastoiseMega Bla...| Water|  null|  630| 79|   103|    120|    135|    115|   78|         1|    false|
+| 10|            Caterpie|   Bug|  null|  195| 45|    30|     35|     20|     20|   45|         1|    false|
+| 11|             Metapod|   Bug|  null|  205| 50|    20|     55|     25|     25|   30|         1|    false|
+| 12|          Butterfree|   Bug|Flying|  395| 60|    45|     50|     90|     80|   70|         1|    false|
+| 13|              Weedle|   Bug|Poison|  195| 40|    35|     30|     20|     20|   50|         1|    false|
+| 14|              Kakuna|   Bug|Poison|  205| 45|    25|     50|     25|     25|   35|         1|    false|
+| 15|            Beedrill|   Bug|Poison|  395| 65|    90|     40|     45|     80|   75|         1|    false|
+| 15|BeedrillMega Beed...|   Bug|Poison|  495| 65|   150|     40|     15|     80|  145|         1|    false|
++---+--------------------+------+------+-----+---+------+-------+-------+-------+-----+----------+---------+
+only showing top 20 rows
+
+1) what are the top 5 strongest non-legendary monsters?
++---+-----------------------+------+-------+-----+---+------+-------+-------+-------+-----+----------+---------+
+|#  |Name                   |Type 1|Type 2 |Total|HP |Attack|Defense|Sp. Atk|Sp. Def|Speed|Generation|Legendary|
++---+-----------------------+------+-------+-----+---+------+-------+-------+-------+-----+----------+---------+
+|445|GarchompMega Garchomp  |Dragon|Ground |700  |108|170   |115    |120    |95     |92   |4         |false    |
+|376|MetagrossMega Metagross|Steel |Psychic|700  |80 |145   |150    |105    |110    |110  |3         |false    |
+|373|SalamenceMega Salamence|Dragon|Flying |700  |95 |145   |130    |120    |90     |120  |3         |false    |
+|248|TyranitarMega Tyranitar|Rock  |Dark   |700  |100|164   |150    |95     |120    |71   |2         |false    |
+|289|Slaking                |Normal|null   |670  |150|160   |100    |95     |65     |100  |3         |false    |
++---+-----------------------+------+-------+-----+---+------+-------+-------+-------+-----+----------+---------+
+
+2) Which Pokemon type has the highest average HP?
+  The type with the highest average HP is: Dragon with an average HP of 83.3125
+
+3) Which is the most common special Attack?
+  The most common special attack is:	  Water
